@@ -17,6 +17,9 @@ backup_dir="/var/lib/postgresql/backup-db"
 # backup file name
 backup_file=backup-db_`date +%Y%m%d%H%M`.tar
 
+# database name
+database_name="database"
+
 # Create backup
 if [ $arg = "--create" ];
 then
@@ -27,7 +30,7 @@ then
     seconds_before=`date +%s`
 
     # pg_dump exec
-    pg_dump -Ft database > $backup_file
+    pg_dump -Ft $database_name > $backup_file
     seconds_after=`date +%s`
 
     timer_exec=`expr "$seconds_after" - "$seconds_before"`
