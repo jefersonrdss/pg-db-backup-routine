@@ -1,6 +1,6 @@
 ## PostgreSQL 13x Backup Database | Shell Script
-#
 ### Passo a passo para usar o script<br><br>
+#
 
 O script deve ser executado com o usuário <strong>postgres</strong>
 ```sh
